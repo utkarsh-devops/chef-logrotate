@@ -1,8 +1,7 @@
 # see "man logrotate" for details
-# rotate log files weekly
+# rotate log files daily/weekly/monthly
 <%= node["logrotate"]["interval"] %>
 
-# keep 4 weeks worth of backlogs
 rotate <%= node["logrotate"]["generation"] %>
 
 <% node["logrotate"]["options"].each do |option| %>
